@@ -5,13 +5,15 @@
     opacity: 0.8;
     /* background-image: url('../k.jpg'); */
     /* background-color: rgb(86, 74, 255); */
-    background-color: rgb(46, 0, 172);
-    position: fixed;
+    background-image: url('https://media.discordapp.net/attachments/849173762083651646/932226796521414656/1601031.png?width=921&height=658');
+    background-size: cover;
+    position: absolute;
     width: 100%;
     height: 100%;
-    top: 100px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 1000;
+
 }
 
 .title {
@@ -26,14 +28,15 @@
 /* rgb(86, 74, 255); old discord-esque color*/
 
 .Login {
-    border-style: hidden;
+    
+    color: white;
     position: sticky;
     padding: 20px;
-    justify-content: flex-end;
-    height: 1%;
+    
+    height: 10%;
     width: 100%;
-    text-align: center;
-    top: 70%;
+    text-align: justify;
+    top: 10%;
     left: 50%;
 }
 
@@ -46,7 +49,9 @@
     border-radius: 0;
     color: white;
     display: flex;
-    background-color: rgb(46, 0, 172);
+    background-image: url('https://media.discordapp.net/attachments/849173762083651646/932226796521414656/1601031.png?width=921&height=658');
+    background-size: cover;
+
     object-fit: fill;
     height: 100%;
     width: 100%;
@@ -64,18 +69,15 @@
     transform: translate(-50%, -50%);
 }
 
-.text {
-  padding-top: 3%;
-}
-
 .about {
+  
     text-align: center;
     padding-top: 5%;
     border-radius: 0%;
     color: white;
     display: block;
     
-    width: 520px;
+    width: 70%;
     height: 200px;
     
     position: absolute;
@@ -83,6 +85,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .button:hover{
     background-color: rgb(255, 255, 255);
@@ -95,10 +98,15 @@
   width: 100%;
 }
 
+.NavLink {
+  color: white;
+  padding-left: 0%;
+  font-size: 36px;
+}
 
 .Nav {
     color: #d778d0;
-    margin:  30px;
+    margin-left: 10px;
     font-size: 30px;
 }
 
@@ -107,7 +115,8 @@
 }
 
 .center {
-    position: absolute;
+    width: 25%;
+    position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -137,9 +146,8 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    position: relative;
-    top: 100%;
-    left: 40%;
+    position: absolute;
+    left: 45%;
     
 
 }
@@ -160,3 +168,4 @@
     padding: .75rem 2rem;
   }
 }
+

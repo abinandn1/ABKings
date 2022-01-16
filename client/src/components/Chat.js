@@ -12,6 +12,7 @@ import { RadiusUpleftOutlined,
 
 
 const Chat = (props) => {
+    let messageCount = 0;
     const games = [
         '21 Questions', 
         'Would You Rather?',
@@ -22,20 +23,30 @@ const Chat = (props) => {
         'Spyfall (https://www.spyfall.app/)',
         'Diep.io (http://diep.io/)',
         'Agar.io (https://agar.io/#ffa)',
+        'https://www.youtube.com/playlist?list=PLFsQleAWXsj_4yDeebiIADdH5FMayBiJo'
     ];
+
+    const sendNotification = () => {
+        if (messageCount === 0 || messageCount % 20 === 0) {
+            notification.success({message:'Lets have fun! Try doing the following: ' + getRandomGame(), duration:5, placement:'bottomRight'});
+        }
+        messageCount++;
+    }
 
     const getRandomGame = () => {
         return games[Math.floor(Math.random() * games.length)];
     }
  
     return (
+        <div>
         <ChatEngine
         projectID='7b72783c-f016-4ad3-bfe3-611fc7b0a8e1'
         userName = {props.prop.Name}
         userSecret = {props.prop.Password}        
-        onNewMessage = {(chatId, message) => {notification.success({message:'Lets have fun! Try playing: ' + getRandomGame(), duration:5, placement:'bottomRight'});}}
-        > <RadiusUprightOutlined/> 
+        onNewMessage = {(chatId, message) => {sendNotification()}}
+        >
         </ChatEngine>
+        </div>
     )
 }
 

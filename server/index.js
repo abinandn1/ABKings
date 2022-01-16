@@ -22,7 +22,7 @@ const io = new Server(server, {
 const lobbiesList = new LobbiesList();
 
 server.listen(3001, () => {
-    console.log('Server run');
+    console.log('Server running on 3001');
 })
 
 // Routes

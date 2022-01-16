@@ -41,7 +41,10 @@ class Login extends Component{
 
   NicknameComponent = () => {
     return (
-      <Container className="Login">
+      <Container className='center'>
+        <br/>
+        <br/>
+        <br/>
         <Stack gap={10}>
         <Form id="name_container">
           <h3> Enter a nickname </h3>
@@ -64,11 +67,7 @@ class Login extends Component{
                 onChange={(e)=>{this.setState({Password: e.target.value})}}/>
           </Form.Group>
           </Form>
-            <h3> 
-                The purpose of this web app is to enable individuals to meet with random individuals in a randomized groupchat consisting of 4 individuals, where they will be able to play multiplayer
-                games together, or watch randomized videos on various topics. The objective of this webapp is to allow individuals from any types of backgrounds to meet like-minded individuals, and congregate
-                in order to form possible new connections 
-            </h3>
+            
           </Stack>
           <Button type="LoginButton" className='button-73' onClick={(e) => { this.navToChat(e.target.value) }}>Let's Go!</Button>
         </Container>
@@ -83,7 +82,7 @@ class Login extends Component{
       };
     }
     return (
-      <div className="loginPage">
+      <div className='Login'>
         <this.ChatPage prop={{ Name: this.state.Name, Password: this.state.Password}}/>
         <this.NicknameComponent/>
 

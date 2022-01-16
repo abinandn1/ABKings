@@ -31,11 +31,10 @@ class HomePage extends React.Component {
         return (
             <div className='about'>
                 
-                <h3 className='text'> Click Go! Make Some New Friends!
-                </h3>     
-                <div className='center'>
-                    <Button className='button-73' onClick={this.navToLogin}>Go!</Button>
-                </div>
+                <h3> Click Go! Make Some New Friends!
+                </h3>
+                <br/>
+                <Button className='button-73' onClick={this.navToLogin}>Go!</Button>
             </div>  
         );
     }
@@ -47,13 +46,11 @@ class HomePage extends React.Component {
             }
         }
         return (
-            <div >
-                <div>
+            <div>
+                
                     <this.LoginPage/>
-                    <h1 className='center'>
-                    <this.StartChattingButton className='button-73'/>
-                    </h1>
-                </div>
+                    <br/>
+                    <this.StartChattingButton />
             </div>
         );
     }

@@ -1,7 +1,15 @@
 .ce-chat-engine {
-    width:90%;
-    height:600px;
-    padding:100px;
+    
+    position: fixed;
+    width:100%;
+    height:100%;
+    padding-left:100px;
+    padding-right:100px;
+    padding-top: 5%;
+    top: 10%;
+    left: 0%;
+    background-image: url('https://media.discordapp.net/attachments/849173762083651646/932226796521414656/1601031.png?width=921&height=658');
+    
 }
 
 div.ce-chat-title-text {

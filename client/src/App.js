@@ -18,17 +18,17 @@ function App() {
     <div className='HomePage'>
       <BrowserRouter>
         <Navbar fixed='top' bg='light'  variant='light' >
-        <img className='image'
+        <img className='Image'
           alt=''
           src={require('./arrow7.png')}
           width='150'
           height='150'
           />
           
-          <Navbar.Brand className='Nav'> LinkUp </Navbar.Brand>
-            <Nav >
-                  <Nav.Link className='Nav' href='/'>Home</Nav.Link>
-                  <Nav.Link className='Nav'  href='/AboutUs'>About Us</Nav.Link>
+          <Navbar.Brand className='NavLink'> LinkUp </Navbar.Brand>
+            <Nav className='Nav'>
+                  <Nav.Link href='/'>Home</Nav.Link>
+                  <Nav.Link href='/AboutUs'>About Us</Nav.Link>
                   
             </Nav>
         </Navbar>
