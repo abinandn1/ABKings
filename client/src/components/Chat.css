@@ -1,0 +1,32 @@
+.ce-chat-engine {
+    width:90%;
+    height:600px;
+    padding:100px;
+}
+
+div.ce-chat-title-text {
+    color: rgb(116, 66, 231);
+}
+
+div.ce-message-bubble {
+    color:aliceblue;
+    background-color:rgb(116, 66, 231);
+}
+div.ce-section-title-container {
+    color: rgb(116, 66, 231);
+}
+
+div.ce-autocomplete-option {
+    color:rgb(116, 66, 231);
+}
+
+div.ce-settings {
+    color: rgb(116, 66, 231);
+}
+
+div.ce-chat-form-container {
+    color: rgb(116, 66, 231);
+}
+
+.ant-notification.ant-notification-topRight {
+}

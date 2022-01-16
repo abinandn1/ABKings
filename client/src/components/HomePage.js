@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container as div } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { useState } from 'react';
 import Stack from "react-bootstrap/Stack";
 import './Component.css';
@@ -29,7 +29,14 @@ class HomePage extends React.Component {
 
     StartChattingButton = () => {
         return (
-            <Button className='button-73' onClick={this.navToLogin}>Go chatting!</Button>
+            <div className='about'>
+                
+                <h3 className='text'> Click Go! Make Some New Friends!
+                </h3>     
+                <div className='center'>
+                    <Button className='button-73' onClick={this.navToLogin}>Go!</Button>
+                </div>
+            </div>  
         );
     }
     render() {
@@ -40,13 +47,15 @@ class HomePage extends React.Component {
             }
         }
         return (
-            <div className='HomePage' >
-                <div className='HomePage'>
+            <div >
+                <div>
                     <this.LoginPage/>
-                    <this.StartChattingButton/>
+                    <h1 className='center'>
+                    <this.StartChattingButton className='button-73'/>
+                    </h1>
                 </div>
             </div>
-        )
+        );
     }
 };
 

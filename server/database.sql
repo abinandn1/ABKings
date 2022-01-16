@@ -2,7 +2,7 @@ create database chat;
 
 create table if not exists users(
     uid serial unique not null,
-    primary key(uid)
+    primary key(uid)I
 );
 
 create table if not exists messages(

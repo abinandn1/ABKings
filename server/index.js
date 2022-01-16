@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const cors = require('cors');
-const pool = require('./db');
 const port = 5003;
 const {Server} = require('socket.io');
 const LobbiesList = require('./lobbiesList');
@@ -17,34 +16,14 @@ const io = new Server(server, {
     cors:{
         origin: 'http://localhost:3000',
         methods: ['GET','POST'],
-
     },
 });
 
-console.log('woo! We made it this far');
-
-io.on('connection',(socket) => {
-    console.log(`User connected: ${socket.id}`);
-
-    socket.on('JoinRoom', (data)=> {
-        socket.join(data);
-        console.log(`${socket.id} has joined!`);
-    });
-
-    socket.on('sendmsgs', (data) => {
-        socket.to(data).emit('receive_msg',data)
-    });
-
-    socket.on('disconnect', () =>{
-    console.log('User disconnected', socket.id);
-    });
-});
+const lobbiesList = new LobbiesList();
 
 server.listen(3001, () => {
     console.log('Server run');
 })
-
-const lobbiesList = new LobbiesList();
 
 // Routes
 app.get('/message', async(req, res) => {
