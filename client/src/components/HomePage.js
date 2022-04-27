@@ -47,7 +47,6 @@ class HomePage extends React.Component {
         }
         return (
             <div>
-                
                     <this.LoginPage/>
                     <br/>
                     <this.StartChattingButton />

@@ -1,14 +1,8 @@
 import { useState, useEffect, React } from 'react';
-import { ChatEngine } from 'react-chat-engine';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
-import {useParams} from 'react-router-dom';
-import { Container, Row } from 'react-bootstrap';
 import './Chat.css';
 import { notification } from 'antd';
-import { RadiusUpleftOutlined,
-         RadiusUprightOutlined,
-         RadiusBottomleftOutlined,
-         RadiusBottomrightOutlined} from '@ant-design/icons';
+
 
 
 const Chat = (props) => {
@@ -39,13 +33,7 @@ const Chat = (props) => {
  
     return (
         <div>
-        <ChatEngine
-        projectID='7b72783c-f016-4ad3-bfe3-611fc7b0a8e1'
-        userName = {props.prop.Name}
-        userSecret = {props.prop.Password}        
-        onNewMessage = {(chatId, message) => {sendNotification()}}
-        >
-        </ChatEngine>
+        
         </div>
     )
 }
