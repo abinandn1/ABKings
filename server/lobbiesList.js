@@ -1,4 +1,4 @@
-class LobbiesList {
+export class LobbiesList {
     // array of type lobby
     lobbies = [];
 
@@ -26,5 +26,3 @@ class LobbiesList {
         this.lobbies[lobbyIndex].removeUser();
     }
 }
-
-module.exports = LobbiesList;

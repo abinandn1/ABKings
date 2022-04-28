@@ -20,7 +20,7 @@ function App() {
         <Navbar fixed='top' bg='light'  variant='light' >
         <img className='Image'
           alt=''
-          src={require('./arrow7.png')}
+          src={require('./logo.png')}
           width='150'
           height='150'
           />

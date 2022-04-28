@@ -34,7 +34,8 @@ class Login extends Component{
     })
   }
 
-  ChatPage = () => {
+  ChatPage = (prop) => {
+    console.log('name: ' + JSON.stringify(prop.prop.name));
     return null;
   }
 
@@ -83,7 +84,7 @@ class Login extends Component{
     }
     return (
       <div className='Login'>
-        <this.ChatPage prop={{ Name: this.state.Name, Password: this.state.Password}}/>
+        <this.ChatPage prop={{ name: 'testName', password: 'testPassword'}}/>
         <this.NicknameComponent/>
 
           {/* <Chat socket={socket} Name={Name} /> */}
